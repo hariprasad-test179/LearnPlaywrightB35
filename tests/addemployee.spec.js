@@ -6,8 +6,8 @@ test('Login to sauce demo', async ({ page }) => {
 await page.locator("button[type='submit']").click();
 await page.waitForLoadState('networkidle');
 
-await page.locator("input[placeholder='Username']").fill('Admin')
-await page.locator("input[name='password']").fill('Admin123')
+await page.locator("input[placeholder='Username']").fill("Admin")
+await page.locator("input[name='password']").fill("admin123")
 await page.locator("button[type='submit']").click()
  await page.waitForSelector("//h6[text()='Dashboard']", { timeout: 60000 });
 await page.locator("(//span[contains(@class,'oxd-text oxd-text--span')])[2]").click()
